@@ -6,73 +6,97 @@
     <title>يلا نسافر لخدمات التأشيرات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { background-color: #0b0b0b; color: #fff; text-align: center; font-family: 'Segoe UI', Tahoma, sans-serif; padding: 20px; margin: 0; }
+        * { box-sizing: border-box; }
+        body { background-color: #ffffff; color: #333; text-align: center; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 15px; }
         
-        /* الصورة العلوية للمكتب */
-        .header-img { width: 100%; max-width: 400px; height: 200px; border-radius: 20px; object-fit: cover; margin-top: 10px; border: 1px solid #333; }
+        .container { max-width: 450px; margin: 0 auto; border: 1px solid #eee; border-radius: 20px; padding: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         
-        .name { font-size: 24px; font-weight: bold; margin: 20px 0 5px; color: #fff; }
-        .title { color: #aaa; font-size: 14px; margin-bottom: 25px; }
+        /* صورة المكتب العلوية */
+        .header-img { width: 100%; border-radius: 15px; margin-bottom: 20px; display: block; }
 
-        .links-container { width: 100%; max-width: 400px; margin: 0 auto; }
-        
-        /* العناوين الفرعية (مثل "اتصل بنا" أو "واتساب") */
-        .section-title { text-align: right; font-size: 16px; margin: 20px 10px 10px; color: #888; border-right: 3px solid #00d4ff; padding-right: 10px; }
+        .title-text { font-size: 18px; font-weight: bold; margin-bottom: 20px; color: #000; }
 
-        .link-card { 
+        /* تقسيم الواتساب والاتصال */
+        .contact-grid { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 25px; }
+        .column { width: 49%; display: flex; flex-direction: column; gap: 8px; }
+
+        /* رؤوس الأعمدة */
+        .column-header { font-size: 14px; font-weight: bold; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+
+        /* نمط الزر الصغير */
+        .btn-small { 
             display: flex; 
             align-items: center; 
-            padding: 14px 20px; 
-            margin-bottom: 10px; 
-            border-radius: 12px; 
+            justify-content: center; 
+            padding: 10px 5px; 
+            border-radius: 25px; 
             text-decoration: none; 
-            color: white; 
-            font-weight: bold;
-            transition: 0.3s;
+            color: #fff; 
+            font-size: 11px; 
+            font-weight: bold; 
+            border: 1px solid rgba(0,0,0,0.1);
         }
+        .btn-small i { margin-left: 5px; font-size: 14px; }
 
-        .link-card i { font-size: 22px; margin-left: 15px; width: 30px; }
-        .link-text { flex-grow: 1; text-align: right; }
+        /* ألوان مخصصة */
+        .bg-whatsapp { background-color: #25d366; } /* أخضر */
+        .bg-phone { background-color: #0077b6; } /* سماوي غامق */
 
-        /* ألوان الأزرار حسب الشركات والتطبيقات */
-        .btn-saba { background: #e62020; } /* سبأفون أحمر */
-        .btn-yemen { background: #2e7d32; } /* يمن موبايل أخضر */
-        .btn-you { background: #ffcc00; color: #000; } /* يو أصفر */
-        .btn-whatsapp { background: #25d366; }
-        .btn-tiktok { background: #000; border: 1px solid #fff; }
-        .btn-instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
-        .btn-facebook { background: #1877f2; }
+        /* أزرار السوشيال ميديا العريضة */
+        .social-section { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+        .btn-wide { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 12px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            color: #fff; 
+            font-weight: bold; 
+            font-size: 15px;
+        }
+        .btn-wide i { font-size: 20px; margin-left: 10px; }
+        
+        .fb { background-color: #1877f2; }
+        .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tk { background-color: #000; }
 
-        .link-card:active { transform: scale(0.97); }
+        .footer { margin-top: 30px; font-size: 11px; color: #777; font-weight: bold; border-top: 1px solid #eee; padding-top: 15px; }
     </style>
 </head>
 <body>
 
-    <img src="Y.jpg" class="header-img">
-    
-    <div class="name">يلا نسافر لخدمات التأشيرات</div>
-    <div class="title">دقة، سرعة، وموثوقية في إنجاز معاملاتكم</div>
+    <div class="container">
+        <img src="Y.jpg" class="header-img">
 
-    <div class="links-container">
-        
-        <div class="section-title">إتصل بنا مباشرة:</div>
-        <a href="tel:711115879" class="link-card btn-saba"><i class="fas fa-phone"></i><span class="link-text">سبأفون: 711115879</span></a>
-        <a href="tel:771115879" class="link-card btn-yemen"><i class="fas fa-phone"></i><span class="link-text">يمن موبايل: 771115879</span></a>
-        <a href="tel:730885879" class="link-card btn-you"><i class="fas fa-phone"></i><span class="link-text">يو (YOU): 730885879</span></a>
+        <div class="title-text">تواصل معنا عبر الروابط التالية:</div>
 
-        <div class="section-title">تواصل معنا واتساب:</div>
-        <a href="https://wa.me/967711115879" class="link-card btn-whatsapp"><i class="fab fa-whatsapp"></i><span class="link-text">واتساب (سبأفون)</span></a>
-        <a href="https://wa.me/967771115879" class="link-card btn-whatsapp"><i class="fab fa-whatsapp"></i><span class="link-text">واتساب (يمن موبايل)</span></a>
-        <a href="https://wa.me/967730885879" class="link-card btn-whatsapp"><i class="fab fa-whatsapp"></i><span class="link-text">واتساب (يو)</span></a>
+        <div class="contact-grid">
+            <div class="column">
+                <div class="column-header"><i class="fab fa-whatsapp" style="color:#25d366"></i> WhatsApp</div>
+                <a href="https://wa.me/967711115879" class="btn-small bg-whatsapp"><i class="fab fa-whatsapp"></i> Saba Phone</a>
+                <a href="https://wa.me/967771115879" class="btn-small bg-whatsapp"><i class="fab fa-whatsapp"></i> Yemen Mobile</a>
+                <a href="https://wa.me/967730885879" class="btn-small bg-whatsapp"><i class="fab fa-whatsapp"></i> YOU</a>
+            </div>
 
-        <div class="section-title">تابعنا على السوشيال ميديا:</div>
-        <a href="https://www.tiktok.com/@yallanusafir" class="link-card btn-tiktok"><i class="fab fa-tiktok"></i><span class="link-text">تيك توك</span></a>
-        <a href="https://www.instagram.com/yallanusafir" class="link-card btn-instagram"><i class="fab fa-instagram"></i><span class="link-text">إنستقرام</span></a>
-        <a href="https://www.facebook.com/share/1a8av8LPZ9/" class="link-card btn-facebook"><i class="fab fa-facebook-f"></i><span class="link-text">فيسبوك</span></a>
+            <div class="column">
+                <div class="column-header"><i class="fas fa-phone-alt" style="color:#0077b6"></i> Phone</div>
+                <a href="tel:711115879" class="btn-small bg-phone"><i class="fas fa-phone-alt"></i> Saba Phone</a>
+                <a href="tel:771115879" class="btn-small bg-phone"><i class="fas fa-phone-alt"></i> Yemen Mobile</a>
+                <a href="tel:730885879" class="btn-small bg-phone"><i class="fas fa-phone-alt"></i> YOU</a>
+            </div>
+        </div>
 
+        <div class="social-section">
+            <a href="https://www.facebook.com/share/1a8av8LPZ9/" class="btn-wide fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.instagram.com/yallanusafir" class="btn-wide ig"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@yallanusafir" class="btn-wide tk"><i class="fab fa-tiktok"></i> Tik Tok</a>
+        </div>
+
+        <div class="footer">
+            <i class="fas fa-map-marker-alt"></i> دمت _ الشارع العام _ أمام كاك بنك _ جوار فندق السفير
+        </div>
     </div>
-
-    <p style="margin-top: 50px; font-size: 11px; color: #444;">&copy; 2026 جميع الحقوق محفوظة لـ يلا نسافر</p>
 
 </body>
 </html>
